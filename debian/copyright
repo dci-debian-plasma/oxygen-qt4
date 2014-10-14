@@ -1,0 +1,262 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: kwin
+Source: https://projects.kde.org/projects/kde/workspace/oxygen
+
+Files: *
+Copyright:
+ 2007 Casper Boemann <cbr@boemann.dk>
+ 2007 Fredrik Heglund <fredrik@kde.org>
+ 2007 Matthew Woehlke <mw_triad@users.sourceforge.net>
+ 2008 Long Huynh Huu <long.upcase@googlemail.com>
+ 2009-2013 Hugo Pereira Da Costa <hugo.pereira@free.fr>
+ 2003 - 2010 Craig Drummond <craig.p.drummond@gmail.com>
+ 2010 Ruslan Kabatsayev <b7.10110111@gmail.com>
+ 2011 Thomas Luebking <thomas.luebking@web.de>
+ 2000 Daniel M. Duley <mosfet@kde.org>
+ 2001-2002, Chris Lee <clee@kde.org>
+ 2001-2002 Karol Szwed <gallium@kde.org>
+ 2002 Malte Starostik <malte@kde.org>
+ 2003-2005 Sandro Giessl <sandro@giessl.com>
+License: LGPL-2.0+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Library General Public
+ License version 2 as published by the Free Software Foundation.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Library General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public License
+ along with this library; see the file COPYING.LIB.  If not, write to
+ the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ Boston, MA 02110-1301, USA.
+ .
+ On Debian systems, the complete text of the GNU Library General
+ Public License version 2 can be found in "/usr/share/common-licenses/LGPL-2".
+
+Files:
+ kstyle/oxygenmdiwindowshadow.cpp
+ kstyle/debug/oxygenwidgetexplorer.cpp
+ kstyle/debug/oxygenwidgetexplorer.h
+ kstyle/demo/oxygendemodialog.h
+ kstyle/demo/oxygenlistdemowidget.h
+ kstyle/demo/oxygenbuttondemowidget.cpp
+ kstyle/demo/oxygendemowidget.cpp
+ kstyle/demo/oxygenlistdemowidget.cpp
+ kstyle/demo/oxygeninputdemowidget.h
+ kstyle/demo/oxygenframedemowidget.cpp
+ kstyle/demo/oxygensliderdemowidget.h
+ kstyle/demo/oxygentabwidget.h
+ kstyle/demo/main.cpp
+ kstyle/demo/oxygentabdemowidget.h
+ kstyle/demo/oxygentabwidget.cpp
+ kstyle/demo/oxygenbenchmarkwidget.h
+ kstyle/demo/oxygendemodialog.cpp
+ kstyle/demo/oxygenframedemowidget.h
+ kstyle/demo/oxygenbenchmarkwidget.cpp
+ kstyle/demo/oxygenmdidemowidget.h
+ kstyle/demo/oxygendemowidget.h
+ kstyle/demo/oxygensimulator.cpp
+ kstyle/demo/oxygenmdidemowidget.cpp
+ kstyle/demo/oxygensimulator.h
+ kstyle/demo/oxygenbuttondemowidget.h
+ kstyle/demo/oxygentabdemowidget.cpp
+ kstyle/demo/oxygensliderdemowidget.cpp
+ kstyle/demo/oxygeninputdemowidget.cpp
+ kstyle/transitions/oxygenlineeditdata.h
+ kstyle/transitions/oxygencomboboxengine.cpp
+ kstyle/transitions/oxygentransitionwidget.cpp
+ kstyle/transitions/oxygentransitions.cpp
+ kstyle/transitions/oxygentransitiondata.cpp
+ kstyle/transitions/oxygenlabelengine.h
+ kstyle/transitions/oxygenstackedwidgetdata.cpp
+ kstyle/transitions/oxygentransitions.h
+ kstyle/transitions/oxygenlabeldata.h
+ kstyle/transitions/oxygenlineeditengine.h
+ kstyle/transitions/oxygentransitiondata.h
+ kstyle/transitions/oxygencomboboxdata.cpp
+ kstyle/transitions/oxygentransitionwidget.h
+ kstyle/transitions/oxygencomboboxdata.h
+ kstyle/transitions/oxygencomboboxengine.h
+ kstyle/transitions/oxygenlabeldata.cpp
+ kstyle/transitions/oxygenlineeditdata.cpp
+ kstyle/transitions/oxygenlineeditengine.cpp
+ kstyle/transitions/oxygenstackedwidgetdata.h
+ kstyle/transitions/oxygenlabelengine.cpp
+ kstyle/transitions/oxygenstackedwidgetengine.cpp
+ kstyle/transitions/oxygenstackedwidgetengine.h
+ kstyle/oxygenaddeventfilter.h
+ kstyle/config/oxygenanimationconfigwidget.h
+ kstyle/config/oxygenstyleconfig.h
+ kstyle/config/oxygenconfigdialog.cpp
+ kstyle/config/oxygenfollowmouseanimationconfigitem.h
+ kstyle/config/oxygenanimationconfigwidget.cpp
+ kstyle/config/oxygenconfigdialog.h
+ kstyle/config/main.cpp
+ kstyle/config/oxygenstyleconfig.cpp
+ kstyle/config/oxygenfollowmouseanimationconfigitem.cpp
+ kstyle/oxygenblurhelper.h
+ kstyle/oxygenwindowmanager.cpp
+ kstyle/animations/oxygenscrollbarengine.cpp
+ kstyle/animations/oxygenscrollbardata.cpp
+ kstyle/animations/oxygenwidgetstatedata.cpp
+ kstyle/animations/oxygendockseparatorengine.h
+ kstyle/animations/oxygenanimationdata.cpp
+ kstyle/animations/oxygentoolbardata.h
+ kstyle/animations/oxygendockseparatordata.cpp
+ kstyle/animations/oxygenheaderviewengine.cpp
+ kstyle/animations/oxygenprogressbarengine.h
+ kstyle/animations/oxygenmenubardata.h
+ kstyle/animations/oxygenmenuengine.cpp
+ kstyle/animations/oxygenmenuengine.h
+ kstyle/animations/oxygenspinboxengine.cpp
+ kstyle/animations/oxygensliderengine.cpp
+ kstyle/animations/oxygenenabledata.h
+ kstyle/animations/oxygenprogressbarengine.cpp
+ kstyle/animations/oxygenspinboxdata.h
+ kstyle/animations/oxygenspinboxdata.cpp
+ kstyle/animations/oxygenmenudata.h
+ kstyle/animations/oxygenmdiwindowdata.cpp
+ kstyle/animations/oxygenwidgetstateengine.cpp
+ kstyle/animations/oxygenmdiwindowengine.cpp
+ kstyle/animations/oxygenbaseengine.cpp
+ kstyle/animations/oxygentabbarengine.cpp
+ kstyle/animations/oxygenbusyindicatorengine.h
+ kstyle/animations/oxygensliderengine.h
+ kstyle/animations/oxygentabbarengine.h
+ kstyle/animations/oxygenscrollbarengine.h
+ kstyle/animations/oxygenprogressbardata.cpp
+ kstyle/animations/oxygenwidgetstateengine.h
+ kstyle/animations/oxygensplitterengine.h
+ kstyle/animations/oxygenprogressbardata.h
+ kstyle/animations/oxygenheaderviewengine.h
+ kstyle/animations/oxygenheaderviewdata.h
+ kstyle/animations/oxygentoolbardata.cpp
+ kstyle/animations/oxygentabbardata.cpp
+ kstyle/animations/oxygenmenubardata_imp.h
+ kstyle/animations/oxygenmenubardata.cpp
+ kstyle/animations/oxygensliderdata.h
+ kstyle/animations/oxygendockseparatordata.h
+ kstyle/animations/oxygenmdiwindowdata.h
+ kstyle/animations/oxygenheaderviewdata.cpp
+ kstyle/animations/oxygensliderdata.cpp
+ kstyle/animations/oxygenwidgetstatedata.h
+ kstyle/animations/oxygenanimations.h
+ kstyle/animations/oxygenmdiwindowengine.h
+ kstyle/animations/oxygentoolbarengine.cpp
+ kstyle/animations/oxygenbusyindicatorengine.cpp
+ kstyle/animations/oxygentoolboxengine.h
+ kstyle/animations/oxygenmenubarengine.h
+ kstyle/animations/oxygenenabledata.cpp
+ kstyle/animations/oxygenmenubarengine.cpp
+ kstyle/animations/oxygentoolboxengine.cpp
+ kstyle/animations/oxygenmenudata.cpp
+ kstyle/animations/oxygenanimationdata.h
+ kstyle/animations/oxygendockseparatorengine.cpp
+ kstyle/animations/oxygenanimations.cpp
+ kstyle/animations/oxygenbaseengine.h
+ kstyle/animations/oxygengenericdata.h
+ kstyle/animations/oxygensplitterengine.cpp
+ kstyle/animations/oxygentabbardata.h
+ kstyle/animations/oxygendatamap.h
+ kstyle/animations/oxygengenericdata.cpp
+ kstyle/animations/oxygenbusyindicatordata.h
+ kstyle/animations/oxygenscrollbardata.h
+ kstyle/animations/oxygentoolbarengine.h
+ kstyle/animations/oxygenspinboxengine.h
+ kstyle/oxygenwindowmanager.h
+ kstyle/oxygenshadowhelper.cpp
+ kstyle/oxygenblurhelper.cpp
+ kstyle/oxygenshadowhelper.h
+ kstyle/oxygenframeshadow.h
+ kstyle/oxygenmdiwindowshadow.h
+ kstyle/oxygenframeshadow.cpp
+ kwin-decoration/oxygenclientgroupitemdata.cpp
+ kwin-decoration/oxygenfactory.cpp
+ kwin-decoration/demo/oxygenshadowdemowidget.cpp
+ kwin-decoration/demo/main.cpp
+ kwin-decoration/demo/oxygenshadowdemowidget.h
+ kwin-decoration/demo/oxygenshadowdemodialog.cpp
+ kwin-decoration/demo/oxygenshadowdemodialog.h
+ kwin-decoration/config/oxygendetectwidget.cpp
+ kwin-decoration/config/oxygenanimationconfigwidget.h
+ kwin-decoration/config/oxygenconfig.cpp
+ kwin-decoration/config/oxygenexceptiondialog.cpp
+ kwin-decoration/config/oxygenanimationconfigwidget.cpp
+ kwin-decoration/config/oxygenconfig.h
+ kwin-decoration/config/oxygenexceptionlistwidget.cpp
+ kwin-decoration/config/oxygendetectwidget.h
+ kwin-decoration/config/oxygenexceptionlistwidget.h
+ kwin-decoration/config/oxygenexceptionmodel.cpp
+ kwin-decoration/config/oxygenconfigwidget.h
+ kwin-decoration/config/oxygenconfigwidget.cpp
+ kwin-decoration/config/oxygenexceptionmodel.h
+ kwin-decoration/config/oxygenexceptiondialog.h
+ kwin-decoration/oxygenexceptionlist.h
+ kwin-decoration/oxygenclient.h
+ kwin-decoration/oxygendecorationdefines.h
+ kwin-decoration/oxygenbutton.cpp
+ kwin-decoration/oxygenfactory.h
+ kwin-decoration/oxygentitleanimationdata.h
+ kwin-decoration/oxygenclient.cpp
+ kwin-decoration/oxygensizegrip.cpp
+ kwin-decoration/oxygenclientgroupitemdata.h
+ kwin-decoration/oxygensizegrip.h
+ kwin-decoration/oxygentitleanimationdata.cpp
+ kwin-decoration/oxygenbutton.h
+ kwin-decoration/oxygenexceptionlist.cpp
+ liboxygen/oxygenitemmodel.cpp
+ liboxygen/oxygengenericanimationconfigitem.cpp
+ liboxygen/oxygenshadowcache.cpp
+ liboxygen/oxygenanimation.h
+ liboxygen/oxygengenericanimationconfigitem.h
+ liboxygen/oxygenanimation.cpp
+ liboxygen/oxygenanimationconfigitem.cpp
+ liboxygen/oxygenbaseanimationconfigwidget.h
+ liboxygen/oxygenitemmodel.h
+ liboxygen/oxygenbaseanimationconfigwidget.cpp
+ liboxygen/oxygenshadowconfigwidget.cpp
+ liboxygen/oxygenlistmodel.h
+ liboxygen/oxygenshadowcache.h
+ liboxygen/oxygenanimationconfigitem.h
+ liboxygen/oxygenshadowconfigwidget.h
+Copyright: 2010 Hugo Pereira Da Costa <hugo.pereira@free.fr>
+           2007-2009 Christoph Feck <christoph@maxiom.de>
+License: MIT
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to
+ deal in the Software without restriction, including without limitation the
+ rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+ sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ IN THE SOFTWARE.
+
+Files: debian/*
+Copyright: 2014 Jonathan Riddell <jriddell@ubuntu.com>
+License: GPL-2
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".

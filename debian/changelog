@@ -1,0 +1,7 @@
+oxygen-qt4 (4:5.1.0.1-0ubuntu1) UNRELEASED; urgency=medium
+
+  [ Jonathan Riddell ]
+  * Initial package of qt4 build, same source as oxygen different build
+    flag
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 14 Oct 2014 13:50:05 +0200
