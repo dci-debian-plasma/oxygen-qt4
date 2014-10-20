@@ -1,5 +1,6 @@
 kde-style-oxygen-qt4: package-name-doesnt-match-sonames liboxygenstyle5 liboxygenstyleconfig5
 kde-style-oxygen-qt4: binary-without-manpage usr/bin/oxygen-demo
-kde-style-oxygen-qt4: non-dev-pkg-with-shlib-symlink usr/lib/liboxygenstyleconfig.so.5.1.0 usr/lib/liboxygenstyleconfig.so
-kde-style-oxygen-qt4: non-dev-pkg-with-shlib-symlink usr/lib/liboxygenstyle.so.5.1.0 usr/lib/liboxygenstyle.so
+kde-style-oxygen-qt4: binary-without-manpage usr/bin/oxygen-settings
+kde-style-oxygen-qt4: non-dev-pkg-with-shlib-symlink usr/lib/liboxygenstyleconfig.so.5.* usr/lib/liboxygenstyleconfig.so
+kde-style-oxygen-qt4: non-dev-pkg-with-shlib-symlink usr/lib/liboxygenstyle.so.5.* usr/lib/liboxygenstyle.so
 oxygen-qt4 source: no-human-maintainers

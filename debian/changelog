@@ -4,4 +4,10 @@ oxygen-qt4 (4:5.1.0.1-0ubuntu1) UNRELEASED; urgency=medium
   * Initial package of qt4 build, same source as oxygen different build
     flag
 
+  [ Harald Sitter ]
+  * Lintian override fixes
+    + Override libraries with  wildcards to not update them every
+      release.
+    + Override new missing manpages.
+
  -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 14 Oct 2014 13:50:05 +0200
