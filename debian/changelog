@@ -1,4 +1,4 @@
-oxygen-qt4 (4:5.1.0.1-0ubuntu1) UNRELEASED; urgency=medium
+oxygen-qt4 (4:5.1.0.1-0ubuntu1) vivid; urgency=medium
 
   [ Jonathan Riddell ]
   * Initial package of qt4 build, same source as oxygen different build
