@@ -1,4 +1,10 @@
-oxygen-qt4 (4:5.1.0.1-0ubuntu1) UNRELEASED; urgency=medium
+oxygen-qt4 (4:5.1.1-0ubuntu2) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 10 Nov 2014 21:09:31 +0100
+
+oxygen-qt4 (4:5.1.0.1-0ubuntu1) vivid; urgency=medium
 
   [ Jonathan Riddell ]
   * Initial package of qt4 build, same source as oxygen different build
