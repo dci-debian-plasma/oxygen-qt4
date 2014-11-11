@@ -1,8 +1,9 @@
-oxygen-qt4 (4:5.1.0.1-0ubuntu2) vivid; urgency=medium
+oxygen-qt4 (4:5.1.1-0ubuntu2) vivid; urgency=medium
 
+  * New upstream release
   * Remove unused build-dep kde-workspace-dev
 
- -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 10 Nov 2014 16:39:22 +0100
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 10 Nov 2014 21:09:31 +0100
 
 oxygen-qt4 (4:5.1.0.1-0ubuntu1) vivid; urgency=medium
 
