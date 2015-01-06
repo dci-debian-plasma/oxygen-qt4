@@ -1,3 +1,9 @@
+oxygen-qt4 (4:5.1.2-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 05 Jan 2015 19:29:53 +0100
+
 oxygen-qt4 (4:5.1.1-0ubuntu2) vivid; urgency=medium
 
   * New upstream release
