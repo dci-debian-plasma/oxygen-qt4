@@ -9,7 +9,7 @@ Build-Depends: cmake,
                pkg-config,
                pkg-kde-tools (>= 0.15.15ubuntu1~),
                kdelibs5-dev
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Section: kde
 Homepage: https://projects.kde.org/projects/kde/workspace/oxygen
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/plasma/oxygen-qt4.git
