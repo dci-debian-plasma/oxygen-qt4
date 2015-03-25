@@ -1,8 +1,8 @@
-oxygen-qt4 (4:5.2.2-0ubuntu1) UNRELEASED; urgency=medium
+oxygen-qt4 (4:5.2.2-0ubuntu1) vivid; urgency=medium
 
   * New upstream release 
 
- -- Scarlett Clark <sgclark@kubuntu.org>  Sat, 21 Mar 2015 08:30:01 -0700
+ -- Scarlett Clark <sgclark@kubuntu.org>  Tue, 24 Mar 2015 07:41:32 -0700
 
 oxygen-qt4 (4:5.2.1-0ubuntu1) vivid; urgency=medium
 
