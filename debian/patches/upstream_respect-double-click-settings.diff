@@ -1,0 +1,193 @@
+commit 90cbdae07abe933b6e01a943f32954e585e6538c
+Author: David Edmundson <kde@davidedmundson.co.uk>
+Date:   Wed Apr 1 13:05:15 2015 +0200
+
+    Replicate functionality of Frameworks KStyle for KDE4
+    
+    Some important style hints are supplied by the KStyle class, mostly
+    importantly whether listviews activate folders on single or double
+    click.
+    
+    For frameworks this now exists in KStyle, so code was not included in
+    Breeze and latest Oxygen. However for KDE4 builds we still need this
+    code.
+    
+    There is a KDE4 kstyle class, but this behvaiour is very different and
+    causes conflicts and a lot of other problems. Re-implementing the part
+    we need seems the easier approach
+    
+    See also review 123188 for Breeze repo
+
+diff --git a/kstyle/CMakeLists.txt b/kstyle/CMakeLists.txt
+index a74383b..faf7e97 100644
+--- a/kstyle/CMakeLists.txt
++++ b/kstyle/CMakeLists.txt
+@@ -69,7 +69,7 @@ set(oxygen_PART_SRCS
+ if(OXYGEN_USE_KDE4)
+ 
+   kde4_add_kcfg_files(oxygen_PART_SRCS oxygenstyleconfigdata.kcfgc)
+-  kde4_add_plugin(oxygen ${oxygen_PART_SRCS})
++  kde4_add_plugin(oxygen ${oxygen_PART_SRCS} kstylekde4compat.cpp)
+   target_link_libraries(oxygen ${KDE4_KDEUI_LIBS})
+   target_link_libraries(oxygen oxygenstyle)
+ 
+diff --git a/kstyle/kstylekde4compat.cpp b/kstyle/kstylekde4compat.cpp
+new file mode 100644
+index 0000000..b726090
+--- /dev/null
++++ b/kstyle/kstylekde4compat.cpp
+@@ -0,0 +1,79 @@
++/*************************************************************************
++ * Copyright (C) 2015 by David Edmundson <davidedmundson@kde.org>        *
++ *                                                                       *
++ * This program is free software; you can redistribute it and/or modify  *
++ * it under the terms of the GNU General Public License as published by  *
++ * the Free Software Foundation; either version 2 of the License, or     *
++ * (at your option) any later version.                                   *
++ *                                                                       *
++ * This program is distributed in the hope that it will be useful,       *
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of        *
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
++ * GNU General Public License for more details.                          *
++ *                                                                       *
++ * You should have received a copy of the GNU General Public License     *
++ * along with this program; if not, write to the                         *
++ * Free Software Foundation, Inc.,                                       *
++ * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
++ *************************************************************************/
++
++#include "kstylekde4compat.h"
++
++#include <KConfigGroup>
++#include <QToolBar>
++#include <KSharedConfig>
++
++KStyleKDE4Compat::KStyleKDE4Compat()
++{
++}
++
++KStyleKDE4Compat::~KStyleKDE4Compat()
++{
++}
++
++int KStyleKDE4Compat::styleHint(StyleHint hint, const QStyleOption *option, const QWidget *widget, QStyleHintReturn *returnData) const
++{
++    switch (hint) {
++    case SH_DialogButtonBox_ButtonsHaveIcons: {
++        // was KGlobalSettings::showIconsOnPushButtons() :
++        KConfigGroup g(KSharedConfig::openConfig(), "KDE");
++        return g.readEntry("ShowIconsOnPushButtons", true);
++    }
++
++    case SH_ItemView_ArrowKeysNavigateIntoChildren:
++        return true;
++
++    case SH_ToolButtonStyle: {
++        KConfigGroup g(KSharedConfig::openConfig(), "Toolbar style");
++
++        bool useOthertoolbars = false;
++        const QWidget *parent = widget ? widget->parentWidget() : nullptr;
++
++        //If the widget parent is a QToolBar and the magic property is set
++        if (parent && qobject_cast< const QToolBar * >(parent)) {
++            if (parent->property("otherToolbar").isValid()) {
++                useOthertoolbars = true;
++            }
++        }
++
++        QString buttonStyle;
++        if (useOthertoolbars) {
++            buttonStyle = g.readEntry("ToolButtonStyleOtherToolbars", "NoText").toLower();
++        } else {
++            buttonStyle = g.readEntry("ToolButtonStyle", "TextBesideIcon").toLower();
++        }
++
++        return buttonStyle == QLatin1String("textbesideicon") ? Qt::ToolButtonTextBesideIcon
++               : buttonStyle == QLatin1String("icontextright") ? Qt::ToolButtonTextBesideIcon
++               : buttonStyle == QLatin1String("textundericon") ? Qt::ToolButtonTextUnderIcon
++               : buttonStyle == QLatin1String("icontextbottom") ? Qt::ToolButtonTextUnderIcon
++               : buttonStyle == QLatin1String("textonly") ? Qt::ToolButtonTextOnly
++               : Qt::ToolButtonIconOnly;
++    }
++
++    default:
++        break;
++    };
++
++    return QCommonStyle::styleHint(hint, option, widget, returnData);
++}
+\ No newline at end of file
+diff --git a/kstyle/kstylekde4compat.h b/kstyle/kstylekde4compat.h
+new file mode 100644
+index 0000000..f3bd828
+--- /dev/null
++++ b/kstyle/kstylekde4compat.h
+@@ -0,0 +1,42 @@
++/*************************************************************************
++ * Copyright (C) 2015 by David Edmundson <davidedmundson@kde.org>        *
++ *                                                                       *
++ * This program is free software; you can redistribute it and/or modify  *
++ * it under the terms of the GNU General Public License as published by  *
++ * the Free Software Foundation; either version 2 of the License, or     *
++ * (at your option) any later version.                                   *
++ *                                                                       *
++ * This program is distributed in the hope that it will be useful,       *
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of        *
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
++ * GNU General Public License for more details.                          *
++ *                                                                       *
++ * You should have received a copy of the GNU General Public License     *
++ * along with this program; if not, write to the                         *
++ * Free Software Foundation, Inc.,                                       *
++ * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
++ *************************************************************************/
++
++/**
++ * This class copies the features of KF5's KStyle for use in KDE4 only
++ *
++ * kdelibs4 also has a KStyle class but this isn't a 1-1 mapping and
++ * provides a lot of features we do not want
++ */
++
++#ifndef KSTYLE_KDE4_COMPAT_H
++#define KSTYLE_KDE4_COMPAT_H
++
++#include <QCommonStyle>
++
++class KStyleKDE4Compat : public QCommonStyle
++{
++    Q_OBJECT
++public:
++    KStyleKDE4Compat();
++    ~KStyleKDE4Compat();
++    virtual int styleHint(StyleHint hint, const QStyleOption *opt,
++                        const QWidget *w, QStyleHintReturn *returnData) const;
++};
++
++#endif
+\ No newline at end of file
+diff --git a/kstyle/oxygenstyle.h b/kstyle/oxygenstyle.h
+index eb9f69b..dfa0b3e 100644
+--- a/kstyle/oxygenstyle.h
++++ b/kstyle/oxygenstyle.h
+@@ -51,7 +51,11 @@
+ #include "oxygentileset.h"
+ #include "config-liboxygen.h"
+ 
++#if OXYGEN_USE_KDE4
++#include "kstylekde4compat.h"
++#else
+ #include <KStyle>
++#endif
+ 
+ #include <QAbstractScrollArea>
+ #include <QDockWidget>
+@@ -88,7 +92,7 @@ namespace Oxygen
+ 
+     //* convenience typedef for base class
+     #if OXYGEN_USE_KDE4
+-    using ParentStyleClass = QCommonStyle;
++    using ParentStyleClass = KStyleKDE4Compat;
+     #else
+     using ParentStyleClass = KStyle;
+     #endif
