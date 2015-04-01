@@ -1,3 +1,10 @@
+oxygen-qt4 (4:5.2.2-0ubuntu2) vivid; urgency=medium
+
+  * Add upstream_respect-double-click-settings.diff to fix double click
+    setting
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 01 Apr 2015 16:08:37 +0200
+
 oxygen-qt4 (4:5.2.2-0ubuntu1) vivid; urgency=medium
 
   * New upstream release 
