@@ -1,6 +1,6 @@
-oxygen-qt4 (4:5.2.95-0ubuntu1) UNRELEASED; urgency=medium
+oxygen-qt4 (4:5.3.0-0ubuntu1) UNRELEASED; urgency=medium
 
-  * Beta release
+  * New upstream release
 
  -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 21 Apr 2015 13:45:11 +0200
 
