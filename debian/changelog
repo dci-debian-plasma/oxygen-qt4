@@ -1,14 +1,8 @@
 oxygen-qt4 (4:5.3.1-0ubuntu1) UNRELEASED; urgency=medium
 
-  * Vivid backports.
-
- -- Scarlett Clark <sgclark@kubuntu.org>  Wed, 27 May 2015 19:03:45 -0700
-
-oxygen-qt4 (4:5.3.0-0ubuntu1) UNRELEASED; urgency=medium
-
   * New upstream release
 
- -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 21 Apr 2015 13:45:11 +0200
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 04 Jun 2015 22:01:40 +0200
 
 oxygen-qt4 (4:5.2.2-0ubuntu2) vivid; urgency=medium
 
